@@ -44,7 +44,7 @@ function Display() {
 
     return (
         
-        <div className="dashboard-container">
+        <div className="display-container" data-testid="display">
             <h1>Ball:</h1>
             <p>{count.ball}</p>
             <h1>Strike</h1>
