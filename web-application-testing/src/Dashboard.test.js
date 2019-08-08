@@ -9,7 +9,7 @@ describe('<Dashboard />', () => {
         const dash = render(<DashBoard /> )
 
         //Click buttons
-        const container = document.body
+        
         dash.getByText(/Ball/);
     });
 

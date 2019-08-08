@@ -4,10 +4,10 @@ function DashBoard(props) {
 
     return (
         <div className="btn-container">
-            <button>Ball</button>
-            <button>Strike</button>
-            <button>Foul</button>
-            <button>Hit</button>
+            <button onClick={() => props.addBall()}>Ball</button>
+            <button onClick={()=> props.addStrike()}>Strike</button>
+            <button onClick={()=> props.foul()}>Foul</button>
+            <button onClick={() => props.reset()}>Hit</button>
 
         </div>
     )
