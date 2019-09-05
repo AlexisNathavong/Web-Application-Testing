@@ -1,11 +1,8 @@
 import styled from 'styled-components';
 
-// export const Body = styled.div`
-//     background-color: red;
-// `;
 
 export const Card = styled.div`
-    background-color: #424242;
+    background-color: #0A235C;
     box-shadow: 2px 5px 5px;
     width: 60%;
     margin: 0 auto;

@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import DashBoard from './Dashboard';
+
+import { BallHeader, BallText, StrikeHeader, StrikeText, Card, Dash } from './StyledWidget';
+
 
 function Display() {
     const [count, setCount] = useState({ball: 0, strike: 0});
@@ -35,13 +39,31 @@ function Display() {
     };
 
     return (
-        <div className="display-container" data-testid="display">
-            <h1>Ball</h1>
-                <p>{count.ball}</p>
 
-            <h1>Strike</h1>
-                <p>{count.strike}</p>
-        </div>
+        <Card>
+            <div className="display-container" data-testid="display">
+                <BallHeader>
+                    <h1>Ball</h1>
+                </BallHeader>
+
+                <BallText>
+                    <p>{count.ball}</p>
+                </BallText>
+
+                <StrikeHeader>
+                    <h1>Strike</h1>
+                </StrikeHeader>
+
+                <StrikeText>
+                    <p>{count.strike}</p>
+                </StrikeText>
+
+                <Dash>
+                    <DashBoard addBall={AddBall} addStrike={AddStrike} foul={Foul} reset={Reset}/>
+                </Dash>
+            </div>
+        </Card>
+
     )
 }
 
